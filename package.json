@@ -1,0 +1,9 @@
+{
+  "name": "unit-testing-with-jest",
+  "version": "1.0.0",
+  "description": "Unit Testing and the Jest Testing Framework",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Hess <hessro@oregonstate.edu>",
+  "license": "MIT"
+}
