@@ -11,13 +11,11 @@
  * Even though the logic is very simple, the bug it introduces is one we might
  * easily miss without careful consideration of the test.
  *
- * (Note: the .skip here tells Jest to skip executing this test.)
- *
  * Inspired by the test here:
  *
  *   https://abseil.io/resources/swe-book/html/ch12.html#donapostrophet_put_logic_in_tests
  */
-test.skip("Navigator generates correct URL when navigating to /about", function () {
+test("Navigator generates correct URL when navigating to /about", function () {
     const baseUrl = "http://www.example.com/"
     const path = "/about"
     const nav = new Navigator(baseUrl)
@@ -34,19 +32,17 @@ test.skip("Navigator generates correct URL when navigating to /about", function 
  * the definitions of the helper functions.  This, in turn, can potentially
  * turn these tests into a maintenance burden.
  *
- * (Note: as above, the .skip here tells Jest to skip executing this test.)
- *
  * Inspired by the tests here:
  *
  *   https://abseil.io/resources/swe-book/html/ch12.html#tests_and_code_sharing_dampcomma_not_dr
  */
-test.skip("chat room allows multiple users to register", function () {
+test("chat room allows multiple users to register", function () {
     const users = createUsers([ false, false ])
     const chatroom = createChatroomAndRegisterUsers(users)
     validateChatroomAndUsers(chatroom, users)
 })
 
-test.skip("chat room does not allow a banned user to register", function () {
+test("chat room does not allow a banned user to register", function () {
     const users = createUsers([ true ])
     const chatroom = createChatroomAndRegisterUsers(users)
     validateChatroomAndUsers(chatroom, users)
