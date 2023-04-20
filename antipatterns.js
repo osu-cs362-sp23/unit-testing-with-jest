@@ -23,6 +23,12 @@ test("Navigator generates correct URL when navigating to /about", function () {
     expect(nav.url()).toBe(baseUrl + path)
 })
 
+test("Navigator generates correct URL when navigating to /about", function () {
+    const nav = new Navigator("http://www.example.com/")
+    nav.goTo("/about")
+    expect(nav.url()).toBe("http://www.example.com/about")
+})
+
 
 /*
  * The next two tests implement a different unit testing antipattern by
